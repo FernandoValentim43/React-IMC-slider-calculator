@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import Card from "./components/card.styled"
 
 function App() {
 
   return (
-    <div className="App">
+    <Card>
       <h2>oi</h2>
-    </div>
+    </Card>
   )
 }
 
