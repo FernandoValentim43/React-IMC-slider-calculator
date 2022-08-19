@@ -8,7 +8,6 @@ export const SlideDiv = styled.div`
   input[type="range"] {
     width: 200px;
     -webkit-appearance: none;
-    cursor: pointer;
     height: 10px;
     border-radius: 2px;
   }
@@ -26,16 +25,11 @@ export const SlideDiv = styled.div`
       font-size: 16px;
     }
 
-    .number{
+    .number {
       font-size: 1.3rem;
       height: 35px;
       color: rgb(247, 183, 24);
-     
     }
-
-
-
-    
   }
 `;
 
@@ -49,14 +43,10 @@ export const LabelDiv = styled.label`
     background-color: transparent;
     padding-left: auto;
     width: 50px;
-    
-    
-      font-size: 1.3rem;
-      height: 35px;
-      color: rgb(247, 183, 24);
 
-
-   
+    font-size: 1.3rem;
+    height: 35px;
+    color: rgb(247, 183, 24);
   }
 
   input[type="number"]::-webkit-inner-spin-button,

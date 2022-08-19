@@ -2,10 +2,12 @@ import React from "react";
 import { SlideDiv } from "./Slider.styled";
 import { useState } from "react";
 import { LabelDiv } from "./Slider.styled";
+import { AuthContext } from "../../App";
 
 export const Slider = ({ name, min, max, defaultValue, inner, step }) => {
-  const [weight, setWeight] = useState(65);
-  const [height, setHeight] = useState(1.7);
+  
+  const { imcCalc } = React.useContext(AuthContext); //page authcontext
+  const [weight, setWeight , height, setHeight] = imcCalc; //page state
 
   if (name == "weight") {
     return (

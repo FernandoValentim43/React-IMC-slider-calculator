@@ -16,14 +16,13 @@ export const Card = styled.div`
 
   border-radius: 12px;
 
-  .weight{
+  .weight {
     margin-bottom: 25px;
   }
-`
+`;
 
 export const Text = styled.h1`
   font-weight: 600px;
   text-align: center;
   font-size: 25px;
-  
-`
+`;
