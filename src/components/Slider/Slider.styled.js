@@ -6,12 +6,14 @@ export const SlideDiv = styled.div`
   flex-direction: column;
 
 
-  input[type=range]{
+input[type=range]{
     width: 330px;
     border-radius: 2px;
     height: 23px;
+    -webkit-appearance: none;
 }
 
+//for fire-fox
 input[type=range]::-moz-range-track {
     width: 330px;
 }
@@ -24,6 +26,26 @@ input[type=range]::-moz-range-thumb {
     background: rgb(247, 183, 24);
     cursor: pointer;
 }
+
+//for chrome
+input[type=range]::-webkit-slider-runnable-track {
+  width: 330px;
+}
+    
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: rgb(247, 183, 24);
+    cursor: pointer;
+}
+
+
+
+
 
 
   .labels {
