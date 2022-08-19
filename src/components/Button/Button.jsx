@@ -27,7 +27,7 @@ export const Button = ({ imc }) => {
       setimcAwnser(imc)
       localStorage.setItem("imc",  "Obesidade I");
       console.log("Obesidade I");
-    } else {
+    } else  {
       setimcAwnser(imc)
       console.log("Obesidade II");
       localStorage.setItem("imc",  "Obesidade II");

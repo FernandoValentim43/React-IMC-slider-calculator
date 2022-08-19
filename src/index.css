@@ -1,9 +1,3 @@
-:root {
-  background: rgb(247, 183, 24);
-  background: linear-gradient(315deg, rgba(247, 183, 24, 1) 0%, rgba(245, 197, 78, 1) 100%);
-  font-family: 'Poppins';
-}
-
 
 
 body {
@@ -17,4 +11,11 @@ body {
   display: flex; 
   align-items: center;  
   justify-content: center;  
+
+  background: rgb(247, 183, 24);
+  background: linear-gradient(315deg, rgba(247, 183, 24, 1) 0%, rgba(245, 197, 78, 1) 100%);
+  font-family: 'Poppins';
+
+ 
 }
+

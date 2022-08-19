@@ -12,6 +12,13 @@ export const Card = styled.div`
 
   background-color: rgba(255, 255, 255, 0.6);
 
+  @media (max-width: 600px) {
+    & {
+    background-color: transparent;
+    height: 100%;
+  }
+}
+
   
   width: 660px;
   height: 500px;
@@ -24,6 +31,8 @@ export const Card = styled.div`
   .weight {
     margin-bottom: 25px;
   }
+
+  
 `;
 
 export const Text = styled.h1`
