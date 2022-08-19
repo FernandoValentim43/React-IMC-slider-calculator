@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { css } from "styled-components";
 export const Card = styled.div`
   display: flex;
   flex-direction: column;
@@ -25,4 +26,13 @@ export const Text = styled.h1`
   font-weight: 600px;
   text-align: center;
   font-size: 25px;
+
+  ${(props) =>
+    props.className === "true" &&
+    css`
+      
+    `};
+
+
+
 `;

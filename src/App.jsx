@@ -14,20 +14,21 @@ function App() {
  
   const [weight, setWeight] = useState(65);
   const [height, setHeight] = useState(1.7);
-  const [awnser, setAwnser] = useState("Banana")
+  
 
-  let imc = Number.parseFloat((weight/(height*height))).toFixed(2);
+ 
   
 
   return (
-    <AuthContext.Provider value={{ imcCalc: [weight, setWeight , height ,  setHeight ] }}>
+    <AuthContext.Provider value={{ imcCalc: [weight, setWeight , height ,  setHeight , ] }}>
     <Card>
       <Text>Calcule seu IMC</Text>
 
       <Slider name={"weight"} min={20} max={120} defaultValue={65} inner={"Peso"} step={"1"}/>
       <Slider name={"height"} min={1.00} max={2.00} defaultValue={"170"} inner={"Altura"}  step={"0.01"}/>
-      <Button imc={imc}/>
-      <Text>{awnser}</Text>
+      <Button imc={Number.parseFloat((weight/(height*height))).toFixed(2)}/>
+
+      <Text >{"oi"}</Text>
     </Card>
     </AuthContext.Provider>
   )
