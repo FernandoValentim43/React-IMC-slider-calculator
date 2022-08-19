@@ -1,7 +1,10 @@
 import React from 'react'
+import { ButtonDiv } from './Button.styled'
 
 export const Button = () => {
   return (
-    <div>Button</div>
+    <ButtonDiv>
+      Calcular
+    </ButtonDiv>
   )
 }

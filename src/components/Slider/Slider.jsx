@@ -3,30 +3,59 @@ import { SlideDiv } from "./Slider.styled";
 import { useState } from "react";
 import { LabelDiv } from "./Slider.styled";
 
-export const Slider = ({ name, min, max, defaultValue, inner}) => {
-  const [rangeval, setRangeval] = useState(null);
-  return (
-    <SlideDiv>
-      <div className="labels">
-      <LabelDiv for={name}>
-       {rangeval}
-      </LabelDiv>
-      
-      <LabelDiv for={name}>
-       {inner}
-      </LabelDiv>
-      </div>
+export const Slider = ({ name, min, max, defaultValue, inner, step }) => {
+  const [weight, setWeight] = useState(65);
+  const [height, setHeight] = useState(1.7);
 
-      <input
-        id={name}
-        className={name}
-        type="range"
-        min={min}
-        max={max}
-        defaultValue={defaultValue}
-        step="1"
-        onChange={(event) => setRangeval(event.target.value)}
-      />
-    </SlideDiv>
-  );
+  if (name == "weight") {
+    return (
+      <SlideDiv>
+        <div className="labels">
+          <LabelDiv for={name} className={"label"}>
+            {inner}
+          </LabelDiv>
+
+          <LabelDiv for={name} className={"number"}>
+            {weight}
+          </LabelDiv>
+        </div>
+
+        <input
+          id={name}
+          className={name}
+          type="range"
+          min={min}
+          max={max}
+          defaultValue={weight}
+          step={step}
+          onChange={(event) => setWeight(event.target.value)}
+        />
+      </SlideDiv>
+    );
+  } else if (name == "height") {
+    return (
+      <SlideDiv>
+        <div className="labels">
+          <LabelDiv for={name} className={"label"}>
+            {inner}
+          </LabelDiv>
+
+          <LabelDiv for={name} className={"number"}>
+            {height}
+          </LabelDiv>
+        </div>
+
+        <input
+          id={name}
+          className={name}
+          type="range"
+          min={min}
+          max={max}
+          defaultValue={height}
+          step={step}
+          onChange={(event) => setHeight(event.target.value)}
+        />
+      </SlideDiv>
+    );
+  }
 };

@@ -15,6 +15,10 @@ export const Card = styled.div`
   padding-right: 8.25rem;
 
   border-radius: 12px;
+
+  .weight{
+    margin-bottom: 25px;
+  }
 `
 
 export const Text = styled.h1`
