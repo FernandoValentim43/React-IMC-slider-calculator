@@ -5,12 +5,26 @@ export const SlideDiv = styled.div`
 
   flex-direction: column;
 
-  input[type="range"] {
-    width: 200px;
-    -webkit-appearance: none;
-    height: 10px;
+
+  input[type=range]{
+    width: 330px;
     border-radius: 2px;
-  }
+    height: 23px;
+}
+
+input[type=range]::-moz-range-track {
+    width: 330px;
+}
+
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: rgb(247, 183, 24);
+    cursor: pointer;
+}
+
 
   .labels {
     width: 100%;
@@ -20,20 +34,22 @@ export const SlideDiv = styled.div`
     align-items: center;
 
     .label {
-      height: 30px;
+      
       align-items: center;
-      font-size: 16px;
+      font-size: 1.5rem;
+      margin-top: 25px;
     }
 
     .number {
-      font-size: 1.3rem;
-      height: 35px;
+      font-size: 2.3rem;
+     
       color: rgb(247, 183, 24);
     }
   }
 `;
 
 export const LabelDiv = styled.label`
+  margin-left: 5px;
   display: flex;
   justify-content: space-around;
 
@@ -49,13 +65,5 @@ export const LabelDiv = styled.label`
     color: rgb(247, 183, 24);
   }
 
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
-  input[type="number"] {
-    -moz-appearance: textfield;
-  }
+ 
 `;

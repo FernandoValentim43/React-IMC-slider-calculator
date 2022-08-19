@@ -8,12 +8,16 @@ export const Card = styled.div`
   align-self: center;
   justify-content: center;
 
-  max-width: 250px;
+  
 
   background-color: rgba(255, 255, 255, 0.6);
 
-  padding-left: 8.25rem;
-  padding-right: 8.25rem;
+  
+  width: 660px;
+  height: 500px;
+  
+  padding-left: 4.25rem;
+  padding-right: 4.25rem;
 
   border-radius: 12px;
 
@@ -23,14 +27,15 @@ export const Card = styled.div`
 `;
 
 export const Text = styled.h1`
-  font-weight: 600px;
   text-align: center;
   font-size: 25px;
+  margin: 2px;
+  
 
   ${(props) =>
     props.className === "null" &&
     css`
-      display: none;
+      visibility: hidden;
     `};
 
 
