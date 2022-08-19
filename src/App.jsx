@@ -11,13 +11,9 @@ export const AuthContext = React.createContext();
 function App() {
  
 
- 
   const [weight, setWeight] = useState(65);
   const [height, setHeight] = useState(1.7);
-  const [imcAwnser, setimcAwnser] = useState(null)
-  
-
- 
+  const [imcAwnser, setimcAwnser] = useState("null")
   
 
   return (
@@ -29,7 +25,7 @@ function App() {
       <Slider name={"height"} min={1.00} max={2.00} defaultValue={"170"} inner={"Altura"}  step={"0.01"}/>
       <Button imc={Number.parseFloat((weight/(height*height))).toFixed(2)}/>
 
-      <Text >{"IMC: " + imcAwnser + " (" + localStorage.getItem("imc") + ")"}</Text>
+      <Text className={imcAwnser}>{"IMC: " + imcAwnser + " (" + localStorage.getItem("imc") + ")"}</Text>
     </Card>
     </AuthContext.Provider>
   )

@@ -28,9 +28,9 @@ export const Text = styled.h1`
   font-size: 25px;
 
   ${(props) =>
-    props.className === "true" &&
+    props.className === "null" &&
     css`
-      
+      display: none;
     `};
 
 
