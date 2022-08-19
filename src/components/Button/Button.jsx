@@ -4,32 +4,33 @@ import { AuthContext } from "../../App";
 
 export const Button = ({ imc }) => {
   const { imcCalc } = React.useContext(AuthContext); //page authcontext
-  
+  const [weight, setWeight , height, setHeight , imcAwnser, setimcAwnser] = imcCalc; //page state
+
   const verifyIMC = () => {
     if (imc < 17) {
-      console.log(imc);
+      setimcAwnser(imc)
       console.log("Muito abaixo do peso");
-      localStorage.setItem("Muito abaixo do peso",  imc);
+      localStorage.setItem("imc",  "Muito abaixo do peso");
     } else if (imc > 17 && imc <= 18.49) {
-      console.log(imc);
+      setimcAwnser(imc)
       console.log("Abaixo do peso");
-      localStorage.setItem("Abaixo do peso",  imc);
+      localStorage.setItem("imc",  "Abaixo do peso");
     } else if (imc >= 18.5 && imc <= 24.99) {
-      console.log(imc);
+      setimcAwnser(imc)
       console.log("Peso normal");
-      localStorage.setItem("Peso normal",  imc);
+      localStorage.setItem("imc",  "Peso normal");
     } else if (imc >= 25 && imc <= 29.99) {
-      console.log(imc);
+      setimcAwnser(imc)
       console.log("Acima do peso");
-      localStorage.setItem("Acima do peso",  imc);
+      localStorage.setItem("imc",  "Acima do peso");
     } else if (imc >= 30 && imc <= 34.99) {
-      console.log(imc);
-      localStorage.setItem("Obesidade I",  imc);
+      setimcAwnser(imc)
+      localStorage.setItem("imc",  "Obesidade I");
       console.log("Obesidade I");
     } else {
-      console.log(imc);
+      setimcAwnser(imc)
       console.log("Obesidade II");
-      localStorage.setItem("Obesidade II",  imc);
+      localStorage.setItem("imc",  "Obesidade II");
     }
   };
 
